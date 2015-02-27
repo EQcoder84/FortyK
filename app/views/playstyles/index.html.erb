@@ -8,7 +8,7 @@
 
 
 <% @playstyles.each do |playstyle| %>
-	Title: <%= playstyle.title %><br>
+	Title: <%= link_to playstyle.title, factions_path(playstyle: playstyle.title)  %><br>
 	Description: <%= playstyle.description %><br>
 	<br>
 <% end %>

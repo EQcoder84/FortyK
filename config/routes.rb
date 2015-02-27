@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get '/' => 'playstyles#index'
+  root 'playstyles#index'
 
   post '/playstyles' => 'playstyles#create'
 
