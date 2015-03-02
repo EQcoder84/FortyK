@@ -1,6 +1,10 @@
 <h1>Factions</h1>
 <%= link_to "Playstyles", root_path %><br>
 
+
+
+
+
 <% @factions.each do |faction| %>
-	<%= faction.name %><br>
+	<p class="faction-name"><%= link_to faction.name, faction_path(faction) %></p>
 <% end %>

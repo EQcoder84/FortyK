@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post '/playstyles' => 'playstyles#create'
 
   get '/factions' => 'factions#index'
+
+  get '/factions/:id' => 'factions#show', as: :faction
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

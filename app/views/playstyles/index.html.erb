@@ -1,4 +1,4 @@
-<h1>Welcome to 40k Builder</h1>
+<h1>40k Playstyle</h1>
 
 <%= form_for @playstyle do |f| %>
 <%= f.text_field :title %>
@@ -8,7 +8,9 @@
 
 
 <% @playstyles.each do |playstyle| %>
-	Title: <%= link_to playstyle.title, factions_path(playstyle: playstyle.title)  %><br>
-	Description: <%= playstyle.description %><br>
-	<br>
+	<div class="playstyle-text">
+		<p class="title-text">Title: <%= link_to playstyle.title, factions_path(playstyle: playstyle.title)  %></p>
+		<p class="descript-text">Description: <%= playstyle.description %></p>
+	</div>
+	
 <% end %>

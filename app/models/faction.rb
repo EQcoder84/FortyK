@@ -1,12 +1,20 @@
 class Faction < ActiveRecord::Base
 	has_many :faction_playstyles
 	has_many :playstyles, through: :faction_playstyles
-		# 	if params[:playstyle]
-		# 	@factions = Playstyle.find_by(title: params[:playstyle]).factions
-		# 	if @factions.nil?
-		# 		@factions = Faction.all
-		# 	end
-		# else
-		# 	@factions = Faction.all
-		# end
+
+
+
+
+	def self.by_playstyle(params)
+		if params
+			playstyle = Playstyle.find_by(title: params)
+			if playstyle.nil?
+				Faction.all
+			else
+				playstyle.factions
+			end
+		else
+			Faction.all
+		end
+	end
 end
