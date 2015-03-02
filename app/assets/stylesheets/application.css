@@ -82,3 +82,9 @@ div.playstyle-text {
 	margin: 0 auto;
 	padding-bottom: 2%;
 }
+
+div.fact-img {
+	margin: 0 auto;
+	max-width: 250px;
+}
+img { width: 100%; }
