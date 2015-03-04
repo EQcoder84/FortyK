@@ -4,10 +4,8 @@ class PlaystylesController < ApplicationController
 		@playstyle = Playstyle.new
 	end
 
-	def create
-		@playstyle = Playstyle.new(playstyles_params)
-		@playstyle.save
-		redirect_to :back
+	def show
+		@playstyle = Playstyle.find(params[:id])
 	end
 
 private
