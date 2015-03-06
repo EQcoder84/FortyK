@@ -5,4 +5,10 @@ class FactionsController < ApplicationController
 	def show
 		@faction = Faction.find(params[:id])
 	end
+
+    def filter
+    	@factions = Faction.all 
+    	render json: { factions: @factions }
+    end
+
 end

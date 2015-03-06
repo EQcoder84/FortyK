@@ -1,0 +1,56 @@
+<h5>Playstyle Filter</h5>
+
+<p class="choose-play">Please select your preferred playstyle(s)</p>
+
+	<!-- <input type="checkbox" name="Shooty" value><br>
+  	<input type="checkbox" name="Assaulty"><br> -->
+ <div class="checkers"> 	
+  	<%= check_box_tag "Shooty" %>
+  	<%= label_tag "Shooty" %>
+  	<%= check_box_tag "Assaulty" %>
+  	<%= label_tag "Assaulty" %>
+  	<%= check_box_tag "Monstrous" %>
+  	<%= label_tag "Monstrous" %>
+  	<%= check_box_tag "Psyker" %>
+  	<%= label_tag "Psyker" %>
+  	<%= check_box_tag "Armor" %>
+  	<%= label_tag "Armor" %>
+  	<%= check_box_tag "Mobile" %>
+  	<%= label_tag "Mobile" %>
+  	<%= check_box_tag "Swarm" %>
+  	<%= label_tag "Swarm" %>
+  	<%= check_box_tag "Elite" %>
+  	<%= label_tag "Elite" %>
+  	<%= check_box_tag "Support" %>
+  	<%= label_tag "Support" %>
+  </div>
+
+  	
+
+
+<button>Filter</button>
+
+<script>
+
+$(function() {
+
+
+	$('#filter').on('click', function() {
+		$.each($('input:checked'), function(index, checkbox) {
+			var playstyle = $(checkbox).attr('name');
+
+			console.log(playstyle);
+		});
+	});
+});
+// $(document).ready(function() {
+
+// 	$("h4").click(function() {
+// 		$.get({url: '/filter'})
+// 		.success(function(response){
+// 			// $(".facbox").append(response.factions);
+// 		});	
+// 	});
+// });
+
+</script>

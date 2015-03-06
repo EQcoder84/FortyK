@@ -27,7 +27,7 @@ body {
 	height: 400px;
 }
 
-.hidden{
+.hidden {
 	opacity: 0;
 }
 
@@ -82,6 +82,14 @@ p.playstyle-descript {
     line-height: 150%;
 }
 
+p.choose-play {
+	text-align: left;
+	padding-top: 5%;
+	margin-left: 435px;
+    margin-right: 92px;
+    font-size: 115%;
+}
+
 header {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
@@ -117,6 +125,14 @@ h4 {
 	padding-top: 5%;
 }
 
+h5 {
+	text-align: center;
+	font-family: Nemesis Enforcer Expanded;
+	font-size: 357%;
+	margin: 0 0 0 -3px;
+	padding-top: 3%;
+}
+
 div.playstyle-text {
 	width: 80%;
 	text-align: left;
@@ -132,6 +148,22 @@ div.fact-img {
 div.play-img {
 	margin: 0 auto;
 	max-width: 250px;
+}
+
+div.checkers{
+	width: 69%;
+    border: 1px solid #000000;
+    background: #C2C2D6;
+    margin-left: 189px;
+    line-height: 626%;
+    padding-top: -2%;
+    font-size: 125%;
+    -moz-column-count: 0;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 0px;
+    column-count: 0;
+    column-gap: 20px;
 }
 
 img { width: 100%; }
@@ -164,4 +196,15 @@ ul.facbox{
     -webkit-column-gap: 20px;
     column-count: 3;
     column-gap: 20px;
+}
+
+button {
+	margin-top: 115px;
+	margin-left: 34px;
+	font-size: 187%;
+}
+
+nav.armydeter {
+	padding-top: 51px;
+	font-size: 164%;
 }

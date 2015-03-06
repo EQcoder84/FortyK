@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   
   root 'pages#welcome'
 
+  get '/filter' => 'factions#filter'
+
+  get '/filters' => 'playstyles#filter'
+
   get '/playstyles/:id' => 'playstyles#show', as: :playstyle
 
   get '/playstyles' => 'playstyles#index'
