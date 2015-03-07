@@ -83,18 +83,16 @@ p.playstyle-descript {
 }
 
 p.choose-play {
-	text-align: left;
+	text-align: center;
 	padding-top: 5%;
-	margin-left: 435px;
+	margin-left: 108px;
     margin-right: 92px;
-    font-size: 115%;
+    font-size: 169%;
 }
 
-header {
-	text-align: center;
-	font-family: Nemesis Enforcer Expanded;
-	font-size: 500%;
-	padding-top: 3%;
+header.banner {
+	width: 79%;
+	margin-left: 122px;
 }
 
 h1 {
@@ -112,7 +110,7 @@ h2 {
 h3 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
-	font-size: 250%;
+	font-size: 339%;
 	margin: 0 0 0 -3px;
 	padding-top: 7%;
 }
@@ -120,7 +118,7 @@ h3 {
 h4 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
-	font-size: 250%;
+	font-size: 339%;
 	margin: 0 0 0 -3px;
 	padding-top: 5%;
 }
@@ -128,7 +126,7 @@ h4 {
 h5 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
-	font-size: 357%;
+	font-size: 489%;
 	margin: 0 0 0 -3px;
 	padding-top: 3%;
 }
@@ -150,14 +148,14 @@ div.play-img {
 	max-width: 250px;
 }
 
-div.checkers{
+div.checkers {
 	width: 69%;
-    border: 1px solid #000000;
-    background: #C2C2D6;
-    margin-left: 189px;
+    border: 5px solid #000000;
+    background: #F5E0CC;
+    margin-left: 202px;
     line-height: 626%;
     padding-top: -2%;
-    font-size: 125%;
+    font-size: 131%;
     -moz-column-count: 0;
     -moz-column-gap: 20px;
     -webkit-column-count: 0;
@@ -168,13 +166,14 @@ div.checkers{
 
 img { width: 100%; }
 
-ul.playbox{
+ul.playbox {
 	list-style-type: none;
 	width:50%;
-    border:1px solid #000000;
-    background: #C2C2D6;
-    margin-left: 266px;
-    line-height: 200%;
+    border:5px solid #000000;
+    background: #F5E0CC;
+    margin-left: 285px;
+    line-height: 260%;
+    font-size:125%;
     -moz-column-count: 3;
     -moz-column-gap: 20px;
     -webkit-column-count: 3;
@@ -183,13 +182,14 @@ ul.playbox{
     column-gap: 20px;
 }
 
-ul.facbox{
+ul.facbox {
 	list-style-type: none;
 	width:50%;
-    border:1px solid #000000;
-    background: #C2C2D6;
-    margin-left: 266px;
-    line-height: 200%;
+    border:5px solid #000000;
+    background: #F5E0CC;
+    margin-left: 285px;
+    line-height: 280%;
+    font-size:125%;
     -moz-column-count: 3;
     -moz-column-gap: 20px;
     -webkit-column-count: 3;
@@ -206,5 +206,35 @@ button {
 
 nav.armydeter {
 	padding-top: 51px;
-	font-size: 164%;
+	font-size: 185%;
+}
+
+div.backbutt {
+	margin-left: 34px;
+	font-size: 175%;
+}
+
+div.filt {
+	font-size: 86%;
+	padding-bottom: 43px;
+}
+
+ul.buttclass {
+	list-style-type: none;
+	width:79%;
+    border: 12px solid #000000;
+    background: #F5E0CC;
+    margin-left: 108px;
+    font-size: 129%;
+    line-height: 352%;
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 5px;
+    column-count: 3;
+}
+
+footer {
+	text-align: left;
+	padding-top: 15%;
 }

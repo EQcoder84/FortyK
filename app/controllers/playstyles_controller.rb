@@ -8,8 +8,7 @@ class PlaystylesController < ApplicationController
 		@playstyle = Playstyle.find(params[:id])
 	end
 
-    def filter
-    end
+
 
 private
 	def playstyles_params

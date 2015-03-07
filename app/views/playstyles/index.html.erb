@@ -1,7 +1,7 @@
 <% @playstyles.each do |playstyle| %>
 	<div class="playstyle-text">
-		<p class="title-text"> <%= link_to playstyle.title, factions_path(playstyle: playstyle.title)  %></p>
-		<p class="descript-text"> <%= playstyle.description %></p>
+		<p class="title-text"><%= link_to playstyle.title, factions_path(playstyle: playstyle.title)  %></p>
+		<p class="descript-text"><%= playstyle.description %></p>
 	</div>
 	
 <% end %>

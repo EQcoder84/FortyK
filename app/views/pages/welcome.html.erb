@@ -1,7 +1,9 @@
 <html>
 <body>
-  <header>40k Playstyle Scryer
-  	</header>
+  <meta charset="utf-8">
+  <!-- <div class="banner">
+  </div> -->
+  	<header class="banner"><%= image_tag "40kbanner.jpg" %></header>
     <nav class="armydeter">
 	   <%= link_to "Let's Determine Your Army", filters_path %>
 	</nav>
@@ -20,6 +22,8 @@
 		     <li><%= link_to faction.name, faction %></li>
 		<% end %>
 	</ul>	
+
+	<footer>40kPlaystyleScryer©2015</footer>
 		     
 
 

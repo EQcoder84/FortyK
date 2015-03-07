@@ -5,7 +5,7 @@
 	<!-- <input type="checkbox" name="Shooty" value><br>
   	<input type="checkbox" name="Assaulty"><br> -->
  <div class="checkers"> 	
-  	<%= check_box_tag "Shooty" %>
+  	<%= check_box_tag"Shooty" %>
   	<%= label_tag "Shooty" %>
   	<%= check_box_tag "Assaulty" %>
   	<%= label_tag "Assaulty" %>
@@ -24,33 +24,79 @@
   	<%= check_box_tag "Support" %>
   	<%= label_tag "Support" %>
   </div>
+ 
+<!-- <div ng-app="MainApp" ng-controller="MainCtrl">
+  Shooty
+  <input type="checkbox" ng-model="a">
+  Assaulty
+  <input type="checkbox" ng-model="b">
+  
+  <input type="checkbox" ng-model="c">
+ 
+  <br/>
+  
+  a + c
+  <input id="checkSlave" type="checkbox" ng-checked="a && b">
 
-  	
+  a or c
+  <input id="checkSlave" type="checkbox" ng-checked="a || c">
+  
+</div> -->
 
-
-<button>Filter</button>
-
+<!-- // 'use strict';
+// var app = angular.module('MainApp', []);
+// app.controller('MainCtrl', ['$scope', function($scope){
+  
+// }]);
+// }); -->
 <script>
 
 $(function() {
+	var playstyles = {"Shooty":false, "Assaulty":false, "Monstrous":false, "Psyker":false, "Armor":false, "Mobile":false, "Swarm":false, "Elite":false, "Support":false};
 
-
-	$('#filter').on('click', function() {
+	$('input[type="checkbox"]').on('click', function() {
 		$.each($('input:checked'), function(index, checkbox) {
 			var playstyle = $(checkbox).attr('name');
-
-			console.log(playstyle);
+			// checked.push(playstyle);
+			playstyles = $.each(playstyles, function(value){
+				return playstyles[playstyle] = true;
+			});
 		});
+		for(var playstyle in playstyles){
+			if(playstyles[playstyle]){
+				$('li.'+playstyle).css('background-color', 'green');
+			}else{
+				console.log(playstyle);
+				$('li.'+playstyle).css('background-color', 'red');
+			}
+		}
 	});
-});
-// $(document).ready(function() {
 
-// 	$("h4").click(function() {
-// 		$.get({url: '/filter'})
-// 		.success(function(response){
-// 			// $(".facbox").append(response.factions);
-// 		});	
-// 	});
-// });
+
+});
 
 </script>
+
+<ul class="buttclass">
+<li class="Shooty">Space Marine</li>
+<li class="Shooty">Tau</li>
+<li class="Shooty">Adepta Sororitas</li>
+<li class="Armor">Astra Militarum</li>
+<li class="Mobile">Eldar</li>
+<li class="Mobile">Dark Eldar</li>
+<li class="Swarm">Orks</li>
+<li class="Elite">Dark Angels</li>
+<li class="Shooty">Necrons</li>
+<li class="Shooty Assaulty Psyker">Chaos Space Marines</li>
+<li class="Monstrous">Chaos Daemons</li>
+<li class="Assaulty">Space Wolves</li>
+<li class="Assaulty">Blood Angels</li>
+<li class="Monstrous">Tyranids</li>
+<li class="Psyker">Grey Knights</li>
+<li class="Support">Inquisition</li>
+<li class="Support">Imperial Knights</li>
+</ul>
+
+<div class="backbutt">
+	<%= link_to 'Back', :back %>
+</div
