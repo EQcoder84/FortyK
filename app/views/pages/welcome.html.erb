@@ -3,15 +3,16 @@
   <meta charset="utf-8">
   <!-- <div class="banner">
   </div> -->
-  	<header class="banner"><%= image_tag "40kbanner.jpg" %></header>
+  	<div class="welcomep">
+  	<header class="banner"><%= image_tag "40kbanner.jpg", class: "banner" %></header>
     <nav class="armydeter">
-	   <%= link_to "Let's Determine Your Army", filters_path %>
+	   <%= link_to "Let's Determine Your Army!", filters_path %>
 	</nav>
 	<h3>Playstyles</h3>
 
 	<ul class="playbox">
 	   	<% @playstyles.each do |playstyle| %>
-	   		<li><%= link_to playstyle.title, playstyle %></li>
+	   		<li><%= link_to playstyle.title, playstyle, class:"playstyle-link" %></li>
 	   	<% end %>
 	</ul>
 
@@ -19,12 +20,12 @@
 
 	<ul class="facbox">
 		<% @factions.each do |faction| %>
-		     <li><%= link_to faction.name, faction %></li>
+		     <li><%= link_to faction.name, faction, class:"faction-link" %></li>
 		<% end %>
 	</ul>	
 
 	<footer>40kPlaystyleScryer©2015</footer>
-		     
+	</div>
 
 
 

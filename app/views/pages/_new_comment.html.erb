@@ -1,0 +1,23 @@
+
+
+
+<% if current_user %>
+	<%= form_for @comment do |f| %>
+		<%= f.text_area :description %>
+		<%= f.hidden_field :user_id, value: current_user.id %>
+
+		<% if params[:controller] == "playstyles" %>
+			<%= f.hidden_field :playstyle_id, value: params[:id]%>
+		<% else %>
+			<%= f.hidden_field :faction_id, value: params[:id]%>
+		<% end %>
+		
+		<br>
+		<%= f.submit %>
+	<% end %>
+<% else %>
+
+	<%= link_to "Sign up to leave a comment", new_user_registration_path%>
+
+<% end %>
+

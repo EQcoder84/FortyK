@@ -1,11 +1,26 @@
-<h2><%= @faction.name %></h2>
-<div class="fact-img">
-<%= image_tag @faction.image_url %>
+<div class="faction-info">
+	<h2><%= @faction.name %></h2>
+	<div class="fact-img">
+	<%= image_tag @faction.image_url %>
+	</div>
+
+	<p class="faction-descript"><%= @faction.description %></p>
+
+	<% @comments.each do |comment| %>
+		<%= comment.description %><br>
+	<% end %>
+
+	<div class="comment">
+	<%= render 'pages/new_comment' %>
+	</div>
+
+	<div class="backbutt">
+		<%= link_to 'Back', root_path %>
+	</div>
 </div>
-
-<p class="faction-descript"><%= @faction.description %></p>
-
-
-<div class="backbutt">
-	<%= link_to 'Back', :back %>
-</div>
+<script>
+$(document).ready(function(){
+$("div.faction-info").hide()
+$("div.faction-info").fadeIn("slow")
+});
+</script>

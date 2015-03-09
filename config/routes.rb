@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :users
+  
   root 'pages#welcome'
 
   get '/filter' => 'factions#filter'
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   get '/playstyles' => 'playstyles#index'
   
   post '/playstyles' => 'playstyles#create'
+
+  post '/comments' => 'pages#create_comment'
 
   get '/factions' => 'factions#index'
 

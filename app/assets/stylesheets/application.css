@@ -39,6 +39,10 @@ body {
 
 }
 
+a { 
+	color: #0F0F3D;
+}
+
 p {
 	z-index: -1;
 	opacity: 2.0;
@@ -65,22 +69,31 @@ p.faction-name {
 }
 
 p.faction-descript {
+	border: 2px solid #000000;
+    border-radius: 13px;
+    background: #F5E0CC; 
 	text-align: left;
+	padding: 1%;
 	padding-top: 1%;
-	margin-left: 170px;
-    margin-right: 92px;
+	margin-left: 140px;
+    margin-right: 118px;
     font-size: 115%;
     line-height: 150%;
 }
 
 p.playstyle-descript {
+	border: 2px solid #000000;
+    border-radius: 13px;
+    background: #F5E0CC;
 	text-align: left;
+	padding: 1%;
 	padding-top: 1%;
-	margin-left: 170px;
-    margin-right: 92px;
+	margin-left: 151px;
+    margin-right: 141px;
     font-size: 115%;
-    line-height: 150%;
-}
+    line-height: 209%;
+ }
+
 
 p.choose-play {
 	text-align: center;
@@ -90,9 +103,10 @@ p.choose-play {
     font-size: 169%;
 }
 
-header.banner {
+.banner {
 	width: 79%;
-	margin-left: 122px;
+	margin-left: 90px;
+	border: none;
 }
 
 h1 {
@@ -105,6 +119,7 @@ h2 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
 	font-size: 300%;
+	margin-left: 10%;
 }
 
 h3 {
@@ -127,7 +142,7 @@ h5 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
 	font-size: 489%;
-	margin: 0 0 0 -3px;
+	margin-left: 133px;
 	padding-top: 3%;
 }
 
@@ -141,20 +156,24 @@ div.playstyle-text {
 div.fact-img {
 	margin: 0 auto;
 	max-width: 250px;
+	padding-bottom: 33px;
 }
 
 div.play-img {
 	margin: 0 auto;
 	max-width: 250px;
+	padding-bottom: 33px;
 }
 
 div.checkers {
 	width: 69%;
-    border: 5px solid #000000;
+    border: 2px solid #000000;
+    border-radius: 13px;
     background: #F5E0CC;
+    margin-top: 25px;
+    margin-bottom: 40px;
     margin-left: 202px;
     line-height: 626%;
-    padding-top: -2%;
     font-size: 131%;
     -moz-column-count: 0;
     -moz-column-gap: 20px;
@@ -164,14 +183,19 @@ div.checkers {
     column-gap: 20px;
 }
 
-img { width: 100%; }
+img { 
+	width: 100%;
+	border: 2px solid #000000;
+	border-radius: 13px;
+}
 
 ul.playbox {
 	list-style-type: none;
 	width:50%;
-    border:5px solid #000000;
+    border: 2px solid #000000;
+    border-radius: 13px;
     background: #F5E0CC;
-    margin-left: 285px;
+    margin-left: 313px;
     line-height: 260%;
     font-size:125%;
     -moz-column-count: 3;
@@ -185,9 +209,10 @@ ul.playbox {
 ul.facbox {
 	list-style-type: none;
 	width:50%;
-    border:5px solid #000000;
+    border: 2px solid #000000;
+    border-radius: 13px;
     background: #F5E0CC;
-    margin-left: 285px;
+    margin-left: 313px;
     line-height: 280%;
     font-size:125%;
     -moz-column-count: 3;
@@ -206,12 +231,13 @@ button {
 
 nav.armydeter {
 	padding-top: 51px;
-	font-size: 185%;
+	font-size: 221%;
 }
 
 div.backbutt {
-	margin-left: 34px;
+	margin-left: -1px;
 	font-size: 175%;
+	padding-top: 58px;
 }
 
 div.filt {
@@ -222,11 +248,16 @@ div.filt {
 ul.buttclass {
 	list-style-type: none;
 	width:79%;
-    border: 12px solid #000000;
+    border: 2px solid #000000;
+    border-radius: 13px;
     background: #F5E0CC;
-    margin-left: 108px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 138px;
     font-size: 129%;
     line-height: 352%;
+    padding: 45px;
+    padding-top: 46px;
     -moz-column-count: 3;
     -moz-column-gap: 20px;
     -webkit-column-count: 3;
@@ -236,5 +267,46 @@ ul.buttclass {
 
 footer {
 	text-align: left;
-	padding-top: 15%;
+	margin-top: 270px;
+	margin-bottom: -99px;
+}
+
+.signup {
+	min-height: 450px;
+}
+
+.login {
+	min-height: 450px;
+}
+
+.forgotpass {
+	min-height: 485px;
+}
+
+.welcomep {
+	min-height: 400px;
+}
+
+.field {
+	font-size: 120%;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+.actions {
+	font-size: 150%;
+}
+
+#faction-select {
+	border: 2px solid #000000;
+    border-radius: 13px;
+    margin-top: 10px;
+    background-color: #CCCCCC;
+}
+#faction-select:first-child {
+	margin-top: 0;
+}
+
+.comment {
+	font-size: 166%;
 }

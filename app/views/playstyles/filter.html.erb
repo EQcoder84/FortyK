@@ -1,9 +1,8 @@
+<div class="play-filt">
 <h5>Playstyle Filter</h5>
 
-<p class="choose-play">Please select your preferred playstyle(s)</p>
+<p class="choose-play">Please select your preferred playstyle</p>
 
-	<!-- <input type="checkbox" name="Shooty" value><br>
-  	<input type="checkbox" name="Assaulty"><br> -->
  <div class="checkers"> 	
   	<%= check_box_tag"Shooty" %>
   	<%= label_tag "Shooty" %>
@@ -25,36 +24,13 @@
   	<%= label_tag "Support" %>
   </div>
  
-<!-- <div ng-app="MainApp" ng-controller="MainCtrl">
-  Shooty
-  <input type="checkbox" ng-model="a">
-  Assaulty
-  <input type="checkbox" ng-model="b">
-  
-  <input type="checkbox" ng-model="c">
- 
-  <br/>
-  
-  a + c
-  <input id="checkSlave" type="checkbox" ng-checked="a && b">
-
-  a or c
-  <input id="checkSlave" type="checkbox" ng-checked="a || c">
-  
-</div> -->
-
-<!-- // 'use strict';
-// var app = angular.module('MainApp', []);
-// app.controller('MainCtrl', ['$scope', function($scope){
-  
-// }]);
-// }); -->
 <script>
 
 $(function() {
-	var playstyles = {"Shooty":false, "Assaulty":false, "Monstrous":false, "Psyker":false, "Armor":false, "Mobile":false, "Swarm":false, "Elite":false, "Support":false};
+	
 
 	$('input[type="checkbox"]').on('click', function() {
+    var playstyles = {"Shooty":false, "Assaulty":false, "Monstrous":false, "Psyker":false, "Armor":false, "Mobile":false, "Swarm":false, "Elite":false, "Support":false};
 		$.each($('input:checked'), function(index, checkbox) {
 			var playstyle = $(checkbox).attr('name');
 			// checked.push(playstyle);
@@ -62,12 +38,14 @@ $(function() {
 				return playstyles[playstyle] = true;
 			});
 		});
+    $('li.'+playstyle).css('background-color', 'red');
+
 		for(var playstyle in playstyles){
 			if(playstyles[playstyle]){
 				$('li.'+playstyle).css('background-color', 'green');
 			}else{
 				console.log(playstyle);
-				$('li.'+playstyle).css('background-color', 'red');
+				$('li.'+playstyle).css('background-color', 'none');
 			}
 		}
 	});
@@ -78,25 +56,33 @@ $(function() {
 </script>
 
 <ul class="buttclass">
-<li class="Shooty">Space Marine</li>
-<li class="Shooty">Tau</li>
-<li class="Shooty">Adepta Sororitas</li>
-<li class="Armor">Astra Militarum</li>
-<li class="Mobile">Eldar</li>
-<li class="Mobile">Dark Eldar</li>
-<li class="Swarm">Orks</li>
-<li class="Elite">Dark Angels</li>
-<li class="Shooty">Necrons</li>
-<li class="Shooty Assaulty Psyker">Chaos Space Marines</li>
-<li class="Monstrous">Chaos Daemons</li>
-<li class="Assaulty">Space Wolves</li>
-<li class="Assaulty">Blood Angels</li>
-<li class="Monstrous">Tyranids</li>
-<li class="Psyker">Grey Knights</li>
-<li class="Support">Inquisition</li>
-<li class="Support">Imperial Knights</li>
+  <li class="Shooty" id="faction-select">Space Marine</li>
+  <li class="Shooty" id="faction-select">Tau</li>
+  <li class="Shooty" id="faction-select">Adepta Sororitas</li>
+  <li class="Armor" id="faction-select">Astra Militarum</li>
+  <li class="Mobile" id="faction-select">Eldar</li>
+  <li class="Mobile" id="faction-select">Dark Eldar</li>
+  <li class="Swarm" id="faction-select">Orks</li>
+  <li class="Elite" id="faction-select">Dark Angels</li>
+  <li class="Shooty" id="faction-select">Necrons</li>
+  <li class="Psyker" id="faction-select">Chaos Space Marines</li>
+  <li class="Monstrous" id="faction-select">Chaos Daemons</li>
+  <li class="Assaulty" id="faction-select">Space Wolves</li>
+  <li class="Assaulty" id="faction-select">Blood Angels</li>
+  <li class="Monstrous" id="faction-select">Tyranids</li>
+  <li class="Psyker" id="faction-select">Grey Knights</li>
+  <li class="Support" id="faction-select">Inquisition</li>
+  <li class="Support" id="faction-select">Imperial Knights</li>
 </ul>
 
 <div class="backbutt">
 	<%= link_to 'Back', :back %>
-</div
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+$("div.play-filt").hide()
+$("div.play-filt").fadeIn("slow")
+});
+</script>
