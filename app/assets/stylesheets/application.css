@@ -14,7 +14,7 @@
  *= require_self
  */
 body {
-	background: asset-url("40kbattle3.jpg", image) no-repeat;
+	background: asset-url("40kbattle3.jpg") no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
 	color: black;
