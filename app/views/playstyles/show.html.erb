@@ -7,9 +7,14 @@
 
 	<p class="playstyle-descript"><%= @playstyle.description %></p>
 
+	<div class="commspace">
 	<% @comments.each do |comment| %>
-		<%= comment.description %><br>
+		<%= comment.user.email %>:
+		<%= comment.description %>
+		(<%= time_ago_in_words comment.created_at %> ago)
+		<br>
 	<% end %>
+	</div>
  
  	<div class="comment">
 	<%= render 'pages/new_comment' %>

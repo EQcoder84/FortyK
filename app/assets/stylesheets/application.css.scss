@@ -36,7 +36,6 @@ body {
 	padding: 20px 0 20px 0;
 	text-align: center;
 	padding-bottom: 10%;
-
 }
 
 a { 
@@ -119,7 +118,6 @@ h2 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
 	font-size: 300%;
-	margin-left: 10%;
 }
 
 h3 {
@@ -142,7 +140,7 @@ h5 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
 	font-size: 489%;
-	margin-left: 133px;
+	margin-left: 32px;
 	padding-top: 3%;
 }
 
@@ -233,6 +231,12 @@ nav.armydeter {
 	padding-top: 51px;
 	font-size: 221%;
 }
+.navbar-text {
+	position: absolute;
+	right: 20px;
+	top: 0px;
+	z-index: 2;
+}
 
 div.backbutt {
 	margin-left: -1px;
@@ -254,7 +258,8 @@ ul.buttclass {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 138px;
-    font-size: 129%;
+    font-family: GRUPO3;
+    font-size: 150%;
     line-height: 352%;
     padding: 0px 45px;
     padding-top: 46px;
@@ -309,4 +314,17 @@ footer {
 
 .comment {
 	font-size: 166%;
+}
+
+.commspace{
+	width:56%;
+	border: 2px solid #000000;
+    border-radius: 13px;
+    background-color: white;
+    margin-top: 36px;
+    margin-bottom: 27px;
+    margin-left: 274px;
+    line-height: 352%;
+    padding: 0px 45px;
+    padding-top: 1px;
 }

@@ -6,18 +6,25 @@
 
 	<p class="faction-descript"><%= @faction.description %></p>
 
+	<div class="commspace">
 	<% @comments.each do |comment| %>
-		<%= comment.description %><br>
+		<%= comment.user.email %>:
+		<%= comment.description %>
+		(<%= time_ago_in_words comment.created_at %> ago)
+		<br>
 	<% end %>
-
-	<div class="comment">
-	<%= render 'pages/new_comment' %>
 	</div>
+		
+
+		<div class="comment">
+		<%= render 'pages/new_comment' %>
+		</div>
 
 	<div class="backbutt">
 		<%= link_to 'Back', root_path %>
 	</div>
-</div>
+	</div>
+
 <script>
 $(document).ready(function(){
 $("div.faction-info").hide()
