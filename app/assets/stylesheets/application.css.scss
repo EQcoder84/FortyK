@@ -124,7 +124,7 @@ h3 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
 	font-size: 339%;
-	margin: 0 0 0 -3px;
+	margin: 0 -29px 0 -3px;
 	padding-top: 7%;
 }
 
@@ -132,7 +132,7 @@ h4 {
 	text-align: center;
 	font-family: Nemesis Enforcer Expanded;
 	font-size: 339%;
-	margin: 0 0 0 -3px;
+	margin: 0 -33px 0 -3px;
 	padding-top: 5%;
 }
 
@@ -193,7 +193,7 @@ ul.playbox {
     border: 2px solid #000000;
     border-radius: 13px;
     background: #F5E0CC;
-    margin-left: 313px;
+    margin-left: 323px;
     line-height: 260%;
     font-size:125%;
     -moz-column-count: 3;
@@ -210,7 +210,7 @@ ul.facbox {
     border: 2px solid #000000;
     border-radius: 13px;
     background: #F5E0CC;
-    margin-left: 313px;
+    margin-left: 325px;
     line-height: 280%;
     font-size:125%;
     -moz-column-count: 3;
@@ -228,8 +228,8 @@ button {
 }
 
 nav.armydeter {
-	padding-top: 51px;
-	font-size: 221%;
+	margin-top: -48px;
+	font-size: 120%;
 }
 .navbar-text {
 	position: absolute;
